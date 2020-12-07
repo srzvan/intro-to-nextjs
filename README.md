@@ -1,2 +1,2 @@
 # intro-to-nextjs
-Getting familiar with next.js throught this course
+Getting familiar with **Next.js** throught [this course](https://frontendmasters.com/courses/next-js/).
