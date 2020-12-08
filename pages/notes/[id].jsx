@@ -5,7 +5,7 @@ function Page() {
   var router = useRouter();
   const { id } = router.query;
 
-  return <div>Note id: {id}</div>;
+  return <h1>Note id: {id}</h1>;
 }
 
 export default Page;
