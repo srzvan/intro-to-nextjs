@@ -16,10 +16,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const { useState } = React;
-
-function Page() {
-  const [notes, setNotes] = useState([]);
+function Notes({ notes }) {
   var classes = useStyles();
 
   return (
@@ -30,7 +27,7 @@ function Page() {
 
       <Grid container wrap="wrap" spacing={3}>
         {notes.map(note => (
-          <Grid className={classes.flexItem} item key={note.id}>
+          <Grid item key={note.id} className={classes.flexItem}>
             <Link href="/notes/[id]" as={`/notes/${note.id}`}>
               <a className={classes.link}>
                 <Paper className={classes.paper}>
@@ -45,4 +42,13 @@ function Page() {
   );
 }
 
-export default Page;
+export default Notes;
+
+export async function getServerSideProps() {
+  const res = await fetch(`${process.env.LOCAL_HOST}/api/note`);
+  const { data } = await res.json();
+
+  return {
+    props: { notes: data },
+  };
+}
