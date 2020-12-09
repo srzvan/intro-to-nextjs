@@ -15,7 +15,7 @@ function Single({ note }) {
 export default Single;
 
 export async function getServerSideProps({ params, res, req }) {
-  var response = await fetch(`${process.env.API_URL}/api/note/${params.id}`);
+  var response = await fetch(`${process.env.API_URL}/note/${params.id}`);
 
   if (!response.ok) {
     res.writeHead(302, { Location: "/notes" });
