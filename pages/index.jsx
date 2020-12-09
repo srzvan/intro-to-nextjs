@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Typography } from "@material-ui/core";
 
-function IndexPage() {
+function IndexPage({ content }) {
   return (
     <Typography component="div" align="center">
       <h1>
-        This note taking app is dope{" "}
+        {content.title}{" "}
         <span role="img" aria-labelledby="okay">
           👌
         </span>
@@ -26,3 +26,13 @@ function IndexPage() {
 }
 
 export default IndexPage;
+
+export function getStaticProps() {
+  return {
+    props: {
+      content: {
+        title: "This note taking app is dope",
+      },
+    },
+  };
+}

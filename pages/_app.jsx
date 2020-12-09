@@ -41,7 +41,7 @@ function App({ Component, pageProps }) {
                   </p>
                   <p>
                     P.S. Check out this{" "}
-                    <a href={process.env.HELP_APP_URL} target="_blank">
+                    <a href={process.env.COOL_URL} target="_blank">
                       cool magazine
                     </a>
                     .
