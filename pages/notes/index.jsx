@@ -16,8 +16,10 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+const { useState } = React;
+
 function Page() {
-  var notes = new Array(15).fill(1).map((e, i) => ({ id: i, title: `Note: ${i}` }));
+  const [notes, setNotes] = useState([]);
   var classes = useStyles();
 
   return (
