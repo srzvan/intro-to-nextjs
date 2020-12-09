@@ -41,7 +41,8 @@ class MyDocument extends Document {
           <style jsx global>
             {`
               html,
-              body {
+              body,
+              #__next {
                 height: 100%;
                 width: 100%;
               }

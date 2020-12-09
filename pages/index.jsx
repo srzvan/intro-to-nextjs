@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Link, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 
-function Page() {
+function IndexPage() {
   return (
     <Typography component="div" align="center">
       <h1>
@@ -12,17 +12,17 @@ function Page() {
       </h1>
       <p>
         Created for Scott Moss' <strong>Intro to Next.js</strong> course by swapping{" "}
-        <Link href="https://theme-ui.com/home/" target="_blank">
+        <a href="https://theme-ui.com/home/" target="_blank">
           Theme UI
-        </Link>{" "}
+        </a>{" "}
         with{" "}
-        <Link href="https://material-ui.com/" target="_blank">
+        <a href="https://material-ui.com/" target="_blank">
           Material UI
-        </Link>
+        </a>
         .
       </p>
     </Typography>
   );
 }
 
-export default Page;
+export default IndexPage;
