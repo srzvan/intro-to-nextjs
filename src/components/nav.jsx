@@ -27,7 +27,7 @@ function Nav() {
       <Typography className={classes.typography} component="nav">
         <Grid className={classes.grid} container justify="space-between">
           <Link href="/">
-            <a className={classes.link}>Notes app</a>
+            <a className={classes.link}>Dope Notes</a>
           </Link>
           <Link href="/notes">
             <a className={classes.link}>My notes</a>

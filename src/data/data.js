@@ -1,24 +1,13 @@
-var notes = [
-  {
-    id: 1,
-    title: "This is note 1",
-  },
-  {
-    id: 2,
-    title: "This is note 2",
-  },
-  {
-    id: 3,
-    title: "This is note 3",
-  },
-  {
-    id: 4,
-    title: "This is note 4",
-  },
-  {
-    id: 5,
-    title: "This is note 5",
-  },
-];
+var notes = new Array(15).fill(1).map((_, index) => ({
+  id: Date.now() + index,
+  title: `Note ${index}`,
+}));
+
+notes.unshift({
+  id: 1,
+  title: "Welcome to the Dope Notes app",
+  content:
+    "This app lets you do CRUD operations (Create Read Update Delete) on notes resources. Have fun playing around with it.",
+});
 
 module.exports = notes;
